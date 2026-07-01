@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/config/Conexion.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/perfil.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/catalogo.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/index.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/admin/admin_panel.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/modelo/Usuario.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/modelo/DetallePedido.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/PerfilServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/Pedidos/checkout.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/FiltroAdmin.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/util/HashUtils.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/GestionProductosServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/Pedidos/carrito.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/admin/gestion_productos.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/Pedidos/exito_bancaria.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/RegistroServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/IndexServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/FavoritosServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/dao/ProductoDAO.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/Pedidos/comprobante_pedido.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/modelo/Pedido.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/admin/gestion_pedidos.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/LogoutServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/ProductoServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/login.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/CatalogoAPIServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/Pedidos/exito_yape.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/dao/PedidoDAO.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/producto.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/ProcesarPedidoServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/LoginServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/admin/gestion_usuarios.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/web/registro.jsp</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/UsuariosServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/GestionPedidosServlet.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/modelo/Mueble.java</file>
+            <file>file:/C:/Users/LISET/Documents/NetBeansProjects/ProyectoDesarrolloWeb/src/java/com/ikaza/controlador/CarritoServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
