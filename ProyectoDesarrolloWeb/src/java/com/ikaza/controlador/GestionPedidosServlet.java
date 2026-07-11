@@ -38,7 +38,6 @@ public class GestionPedidosServlet extends HttpServlet {
         // 3. Consultar a la base de datos
         PedidoDAO dao = new PedidoDAO();
         List<Pedido> listaPedidos = dao.listarPedidosAdmin(estado, cliente, fecha);
-
         // 4. Enviar a la vista
         request.setAttribute("pedidos", listaPedidos);
         request.getRequestDispatcher("admin/gestion_pedidos.jsp").forward(request, response);

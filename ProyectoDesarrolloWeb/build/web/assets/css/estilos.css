@@ -6,79 +6,232 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 29 jun. 2026, 15:48:10
     Author     : LISET
 */
-/* --- 1. Variables de Diseño (Personalización de Ikaza) --- */
+/* ==========================================================================
+   ESTILOS GLOBALES & VARIABLES (Identidad de Marca Ikaza)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --primary-color: #212529; /* Gris muy oscuro, casi negro */
-    --accent-color: #d68910;   /* Un tono madera/cálido para detalles */
-    --hover-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
-    --transition: all 0.3s ease-in-out;
+    --ikaza-dark: #121212;
+    --ikaza-gray-dark: #2a2a2a;
+    --ikaza-muted: #64748b;
+    --ikaza-light: #f8fafc;
+    --ikaza-border: #e2e8f0;
+    --ikaza-primary: #0f172a; /* Azul pizarra muy oscuro / Premium */
+    --ikaza-accent: #3b82f6;  /* Azul eléctrico para CTAs interactivos */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-soft: 0 4px 20px -2px rgba(18, 18, 18, 0.05);
+    --shadow-hover: 0 20px 25px -5px rgba(18, 18, 18, 0.1), 0 10px 10px -5px rgba(18, 18, 18, 0.04);
 }
 
-/* --- 2. Estilos Globales --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--ikaza-light) !important;
+    color: var(--ikaza-dark);
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- 3. Tarjetas (Cards) mejoradas --- */
-.card {
-    border: none;
-    border-radius: 12px;
-    transition: var(--transition);
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--ikaza-light);
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--hover-shadow) !important;
-}
-
-/* --- 4. Botones (Efectos de hover) --- */
-.btn {
-    border-radius: 8px;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-/* --- 5. Formularios --- */
-.form-control:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 0.25rem rgba(214, 137, 16, 0.25);
-}
-
-/* --- 6. Navbar y Footer --- */
+/* ==========================================================================
+   NAVEGACIÓN (Navbar Premium)
+   ========================================================================== */
 .navbar {
-    border-bottom: 3px solid var(--accent-color);
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px 0;
 }
 
-footer {
-    border-top: 1px solid #ddd;
-}
-
-/* --- 7. Utilidades pequeñas --- */
-.section-title {
+.navbar-brand {
+    letter-spacing: 2px;
     position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent-color);
-    transform: translateX(-50%);
+/* Efecto elegante para los botones con borde del menú */
+.navbar .btn-outline-light, 
+.navbar .btn-outline-warning, 
+.navbar .btn-outline-info, 
+.navbar .btn-outline-danger {
+    border-radius: var(--radius-sm);
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+/* ==========================================================================
+   INDEX: SECCIÓN HERO
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    padding: 100px 0 !important;
+    border-bottom: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    color: var(--ikaza-primary);
+}
+
+.hero-section .btn-primary {
+    background-color: var(--ikaza-primary);
+    border: none;
+    padding: 12px 35px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+}
+
+/* ==========================================================================
+   TARJETAS DE PRODUCTO (Home & Catálogo)
+   ========================================================================== */
+/* Tarjeta Base del Home */
+.card-mueble {
+    border-radius: var(--radius-md) !important;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+}
+
+.card-mueble:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: var(--shadow-hover) !important;
+}
+
+/* Tarjeta Dinámica del Catálogo */
+.transition-card {
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-soft) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: var(--shadow-hover) !important;
+}
+
+/* Ajustes de imágenes en tarjetas */
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+/* Inputs de Filtrado Estilizados */
+.form-control, .form-select {
+    border: 1px solid var(--ikaza-border);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.15);
+}
+
+/* ==========================================================================
+   VISTAS DE ACCESO (Login & Registro)
+   ========================================================================== */
+.card.shadow {
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card-body h3 {
+    font-weight: 700;
+    color: var(--ikaza-primary);
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   VISTA DE DETALLES DEL PRODUCTO
+   ========================================================================== */
+.rounded-4.overflow-hidden {
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--ikaza-border);
+}
+
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Botón de añadir al carrito pesado/premium */
+.btn-primary.btn-lg {
+    background-color: var(--ikaza-primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.btn-primary.btn-lg:hover:not([disabled]) {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PERFIL DE USUARIO & TABLAS
+   ========================================================================== */
+.table {
+    --bs-table-hover-bg: #f1f5f9;
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--ikaza-muted);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--ikaza-border);
+}
+
+.table td {
+    padding: 16px 12px;
+}
+
+/* Historial de pedidos badges */
+.badge.bg-warning { background-color: #fef3c7 !important; color: #d97706 !important; }
+.badge.bg-info { background-color: #e0f2fe !important; color: #0369a1 !important; }
+.badge.bg-success { background-color: #dcfce7 !important; color: #15803d !important; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--ikaza-dark) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    color: #94a3b8;
 }
 

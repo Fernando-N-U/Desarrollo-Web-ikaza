@@ -10,12 +10,10 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    
-    
-    // Datos de tu base de datos en pgAdmin4
-    private String url = "jdbc:postgresql://localhost:5432/ikaza-Base";
-    private String user = "postgres"; // Usuario por defecto
-    private String pass = "admin"; // ¡CAMBIA ESTO por tu contraseña de pgAdmin!
+    // Datos de tu base de datos en la nube (Render)
+    private String url = "jdbc:postgresql://dpg-d982t058nd3s73bjm0c0-a.oregon-postgres.render.com:5432/ikaza";
+    private String user = "fernando"; 
+    private String pass = "6oOROOkXuOWQIbs02EhCREAJWJ6C0d8I"; 
     
     protected Connection conexion;
 
@@ -25,7 +23,7 @@ public class Conexion {
             Class.forName("org.postgresql.Driver");
             // Establecer la conexión
             conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Conexión exitosa a Ikaza DB");
+            System.out.println("Conexión exitosa a Ikaza DB en la nube");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error al conectar: " + e.getMessage());
         }
