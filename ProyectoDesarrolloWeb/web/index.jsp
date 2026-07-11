@@ -6,7 +6,7 @@
 
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% response.sendRedirect("IndexServlet"); %>
+<% response.sendRedirect("IndexServlet.java"); %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
