@@ -6,6 +6,7 @@ package com.ikaza.controlador;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
@@ -15,8 +16,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/admin/gestion_usuarios.jsp") // Protege esta página específica
+@WebFilter("/admin/gestion_usuarios.jsp")
 public class FiltroAdmin implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        // Método requerido por Tomcat para inicializar el filtro
+    }
+
+    @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) 
             throws IOException, ServletException {
         
@@ -29,7 +37,13 @@ public class FiltroAdmin implements Filter {
         if ("admin".equals(rol)) {
             chain.doFilter(request, response); // Deja pasar al admin
         } else {
-            res.sendRedirect("index.jsp"); // Manda a los demás a la tienda
+            // Redirige a la raíz de la tienda de forma segura
+            res.sendRedirect(req.getContextPath() + "/index.jsp"); 
         }
+    }
+
+    @Override
+    public void destroy() {
+        // Método requerido por Tomcat para apagar el filtro
     }
 }
