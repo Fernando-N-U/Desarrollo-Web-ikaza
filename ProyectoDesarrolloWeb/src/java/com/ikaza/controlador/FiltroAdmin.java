@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/admin/gestion_usuarios.jsp")
+//@WebFilter("/admin/gestion_usuarios.jsp")
 public class FiltroAdmin implements Filter {
 
     @Override
