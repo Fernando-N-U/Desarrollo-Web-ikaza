@@ -76,6 +76,11 @@ public class CatalogoAPIServlet extends HttpServlet {
             
             out.print(json.toString());
         } catch (Exception e) {
+            // Obligamos a Java a enviarle el error real a tu F12 en formato JSON
+            response.setStatus(500);
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().print("{\"error\": \"Error en BD: " + e.getMessage().replace("\"", "'") + "\"}");
             e.printStackTrace();
         }
     }
